@@ -188,3 +188,14 @@ td{
 .saveBtn:hover{
     background:#b89a4e;
 }
+
+td:first-child,
+th:first-child{
+    text-align:left;
+    padding-left:12px;
+}
+
+td:not(:first-child),
+th:not(:first-child){
+    text-align:center;
+}

@@ -14,21 +14,28 @@ function mudarPagina(p){
 
 /* SWIPE */
 
-let startX=0;
+/* SWIPE APENAS EM TELAS GRANDES */
 
-document.addEventListener("touchstart",e=>{
-    startX=e.touches[0].clientX;
-});
+if (window.innerWidth > 768) {
 
-document.addEventListener("touchend",e=>{
+    let startX = 0;
 
-    let endX=e.changedTouches[0].clientX;
-    let diff=startX-endX;
+    document.addEventListener("touchstart", e => {
+        startX = e.touches[0].clientX;
+    });
 
-    if(diff>50) mudarPagina(1);
-    if(diff<-50) mudarPagina(0);
+    document.addEventListener("touchend", e => {
 
-});
+        let endX = e.changedTouches[0].clientX;
+        let diff = startX - endX;
+
+        if (diff > 50) mudarPagina(1);
+        if (diff < -50) mudarPagina(0);
+
+    });
+
+}
+
 
 
 /* CAMPEONATO */
