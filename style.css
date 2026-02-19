@@ -126,19 +126,9 @@ input{
 }
 
 .jogo input{
-    width:70px;
-    height:42px;
-    font-size:18px;
+    width:60px;
+    text-align:center;
 }
-
-@media (max-width:700px){
-    .jogo input{
-        width:55px;
-        height:38px;
-        font-size:16px;
-    }
-}
-
 
 /* TABELA */
 
