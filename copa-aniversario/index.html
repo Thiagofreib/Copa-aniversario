@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Copa Aniversário</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="title">🏆 Copa Aniversário</div>
+
+    <div class="tabs">
+        <button class="tab active" onclick="mudarPagina(0)">Jogos</button>
+        <button class="tab" onclick="mudarPagina(1)">Classificação</button>
+    </div>
+
+</header>
+
+
+<div id="container" class="container">
+
+    <!-- PAGINA JOGOS -->
+    <section class="page">
+
+        <div class="card">
+
+            <h2>Times</h2>
+
+            <div class="teamsGrid">
+                <input id="t1" placeholder="Time A">
+                <input id="t2" placeholder="Time B">
+                <input id="t3" placeholder="Time C">
+                <input id="t4" placeholder="Time D">
+            </div>
+
+            <button class="mainBtn" onclick="gerar()">Gerar Jogos</button>
+            <button class="saveBtn" onclick="salvarConfig()">💾 Salvar</button>
+
+        </div>
+
+        <div id="jogos"></div>
+
+    </section>
+
+
+
+    <!-- PAGINA CLASSIFICAÇÃO -->
+    <section class="page">
+
+        <div class="card">
+
+            <h2>Classificação</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>PTS</th>
+                        <th>V</th>
+                        <th>D</th>
+                        <th>GP</th>
+                        <th>GC</th>
+                        <th>SG</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabela"></tbody>
+
+            </table>
+
+            <div id="final" class="finalBox">
+                Final: —
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
